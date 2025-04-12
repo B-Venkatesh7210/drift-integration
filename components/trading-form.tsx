@@ -16,7 +16,6 @@ import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { AlertCircle, Lock } from "lucide-react";
-import { BN } from "@project-serum/anchor";
 import { PositionDirection, OrderType } from "@drift-labs/sdk";
 import { useWallet } from "@solana/wallet-adapter-react";
 

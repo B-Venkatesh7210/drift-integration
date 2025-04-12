@@ -63,6 +63,7 @@ export const initializeDriftClient = async (
   const client = new DriftClient({
     connection,
     wallet: provider.wallet,
+    //@ts-ignore
     programID: sdkConfig.DRIFT_PROGRAM_ID,
     env: "devnet",
     opts: {
