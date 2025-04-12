@@ -69,8 +69,6 @@ export function TradingForm({
   const [auctionStartPrice, setAuctionStartPrice] = useState("");
   const [auctionEndPrice, setAuctionEndPrice] = useState("");
 
-  console.log("client", client);
-
   if (isViewOnly) {
     return (
       <Card className="p-6">
@@ -108,6 +106,9 @@ export function TradingForm({
       }
 
       const marketIndex = MARKETS[market as keyof typeof MARKETS];
+      if (!client) {
+        throw new Error("Client is not initialized");
+      }
       const baseAssetAmount = client.convertToPerpPrecision(parseFloat(size));
       const now = Math.floor(Date.now() / 1000);
 
